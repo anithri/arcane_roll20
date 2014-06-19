@@ -1,11 +1,10 @@
 {
-  "name": "your-lib-name-here",
+  "name": "arcane_rol20",
   "version": "0.0.1",
-  "description": "A description about how Lineman helped you build your lib",
-  "homepage": "https://your/lib/name/here",
+  "description": "Useful scripts and stuff for Roll20's api",
+  "homepage": "https://github.com/anithri/aracne_roll20",
   "author": {
-    "name": "John Doe",
-    "company": "ACME, Inc."
+    "name": "Scott M Parrish"
   },
   "main": "main.js",
   "dependencies": {

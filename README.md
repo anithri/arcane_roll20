@@ -1,78 +1,47 @@
 # lineman-lib-template
 
-[![Build Status](https://travis-ci.org/linemanjs/lineman-lib-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-lib-template)
+//[![Build Status](https://travis-ci.org/linemanjs/lineman-lib-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-lib-template)
 
-This is a hyper-focused template project for [Lineman](http://linemanjs.org) that's designed to make it *an absolute breeze* to develop and distribute JavaScript libraries for the web.
+Thanks to [Lineman](http://linemanjs.org) and the [lineman-lib-template](https://github.com/linemanjs/lineman-lib-template)
 
-## getting started
+This project is to provide script files to use with the [Roll20](http://roll20.net/) [API](https://wiki.roll20.net/API:Introduction).
 
-1. clone & cd into this repo
-2. ensure you have [Node](http://nodejs.org) and [Lineman](https://github.com/linemanjs/lineman#getting-started) installed
-3. run `lineman build`
+I learned my programming skills and habits from the Ruby community, so I bring that mindset to my programming and
+organizational habits.  Please don't let it put you off.  Please contribute pull requests, I'll be ecstatic to add contributers.
 
-Now, if you crack open the dist directory, you should see two files:
+## So What's it do?
 
-**your-lib-name-here.js:**
-``` javascript
-/* your-lib-name-here - 0.0.1
- * A description about how Lineman helped you build your lib
- * https://your/lib/name/here
- */
-(function() {
- //... some JavaScript code
-}).call(this);
-```
-and **your-lib-name-here.min.js:**
-```
-/* your-lib-name-here - 0.0.1
- * A description about how Lineman helped you build your lib
- * https://your/lib/name/here
- */
-(function() {/* some minified JavaScript code */}).call(this);
-```
+I'm interested in writing code to support my specifc needs with a Star Wars Edege of the Empire campaign.  But at
+the same time from the very first integration I tried (the great EotE dice roller) that the order of scripts running in
+the sandbox matters, and there is currently no way to reorder things.
+# provide the build environment to take many scripts and combine them into one.
+# build a utility library of functions that will help me (and others?) write other code easier.
+# refactor the die roller into a more data friendly model.
+# provide an initiative system for SW:Eote.
+# provide a force pool system for SW:Eote
+# provide a cargo bay inventory system and ships account system for chat
+# provide an astrogation droid who can plot routes
 
-Well that was fun! `lineman build` has created a little library distribution for us.
+### That all?
 
-What's nifty is that the repo *also* benefits from the same lifecycle that Lineman provides for web apps. The gist is that means you can:
+After that I'm going to be much more interested in dealing with generators, data stores, and things that allow me to
+generate a name nd with simple chat commands add a entry for him somewhere that can be tracked.  I also have a huge ADD
+issue and so I may wander off course a bit.  All the more reasons for people to help out!
 
-* Get live compilation of CoffeeScript (or JSHinting) with `lineman run`
-* Use as many files as you like and know that they'll be concatenated for you
-* Write tests and run them with `lineman spec` during development
-* Run tests in CI with `lineman spec-ci`
+NPC Generator/Loggers?
 
-See [Lineman's README](https://github.com/linemanjs/lineman#working-with-lineman) for more details.
+I'll stop now.
 
-## making your lib
+## Areas that need clarifying,
 
-Once you've confirmed that everything's working, the next step is to make it your own!
-
-First, take a look at the package.json and fill it out with the pertinent details about your library:
-
-```
-{
-  "name": "your-lib-name-here",
-  "version": "0.0.1",
-  "description": "A description about how Lineman helped you build your lib",
-  "homepage": "https://your/lib/name/here",
-  "author": {
-    "name": "Justin Searls (or your name)",
-    "company": "Test Double, LLC (or your company)"
-  },
-  "dependencies": {
-    "lineman": "~0.11.0"
-  }
-}
-```
-
-Second, you'll probably want to remove the sample code at `app/js/sum_to.coffee` and `spec/js/sum_to_spec.coffee`.
-
-Third, you'll probably want to call a friend over to your desk to show how easy it is as you write your library with Lineman.
-
-Fourth, you'll want to delete this README and write your own! Good luck!
+Quite a lot to start.
+*  How do the various settings in package.json like dependencies and scripts, main work?
 
 ## notes
 
-It's worth mentioning that lineman-lib-template will, by default, *not include* any JavaScript files you place in `vendor/js` in the distribution. However, some libraries may desire this behavior and it can be set with a flag at the top of `config/application.coffee`, just change `false` to `true`:
+It's worth mentioning that lineman-lib-template will, by default, *not include* any JavaScript files you place in
+`vendor/js` in the distribution. However, some libraries may desire this behavior and it can be set with a flag at the
+ top of `config/application.coffee`, just change `false` to `true`:
 
 ``` coffee
 includeVendorInDistribution = true

@@ -8,7 +8,10 @@
 module.exports = function(lineman) {
   //Override file patterns here
   return {
-
+    app: [
+        "app/js/utility.js",
+        "app/js/**/*.js"
+    ]
     // As an example, to override the file patterns for
     // the order in which to load third party JS libs:
     //
@@ -21,3 +24,5 @@ module.exports = function(lineman) {
 
   };
 };
+
+

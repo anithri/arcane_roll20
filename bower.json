@@ -1,7 +1,7 @@
 {
-  "name": "your-lib-name-here",
+  "name": "arcane_rol20",
   "version": "0.0.1",
-  "main": "dist/your-lib-name-here.js",
+  "main": "dist/arcane_rol20.js",
   "ignore": [
     "app",
     "config",
